@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title>HTTP的简单介绍及查看请求与响应</title>
+      <link href="/2018/09/04/9-4/"/>
+      <url>/2018/09/04/9-4/</url>
+      <content type="html"><![CDATA[<h1 id="HTTP-请求包括哪些部分，如何用Chrome开发者工具查看-HTTP-请求内容"><a href="#HTTP-请求包括哪些部分，如何用Chrome开发者工具查看-HTTP-请求内容" class="headerlink" title="HTTP 请求包括哪些部分，如何用Chrome开发者工具查看 HTTP 请求内容"></a>HTTP 请求包括哪些部分，如何用Chrome开发者工具查看 HTTP 请求内容</h1><p>HTTP 的作用就是指导浏览器和服务器如何进行沟通。<br>一个请求一共分为4部分：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1 动词 路径 协议/版本  //动词有 GET POST PUT PATCH DELETE HEAD OPTIONS 等</span><br><span class="line">2 Key1: value1</span><br><span class="line">2 Key2: value2</span><br><span class="line">2 Key3: value3</span><br><span class="line">2 Content-Type: application/x-www-form-urlencoded</span><br><span class="line">2 Host: www.baidu.com</span><br><span class="line">2 User-Agent: curl/7.54.0</span><br><span class="line">3 //此处是一个空格，必填，分割2、4部分</span><br><span class="line">4 要上传的数据</span><br></pre></td></tr></table></figure></p><h2 id="用-Chrome-发请求"><a href="#用-Chrome-发请求" class="headerlink" title="用 Chrome 发请求"></a>用 Chrome 发请求</h2><ol><li><p>打开 Network</p></li><li><p>地址栏输入网址</p></li><li><p>在 Network 点击，查看 request，点击「view source」</p></li><li><p>点击「view source」</p></li><li><p>如果有请求的第四部分，那么在 FormData 或 Payload 里面可以看到  </p></li></ol><h1 id="HTTP-响应包括哪些部分，如何用Chrome开发者工具查看-HTTP-响应内容"><a href="#HTTP-响应包括哪些部分，如何用Chrome开发者工具查看-HTTP-响应内容" class="headerlink" title="HTTP 响应包括哪些部分，如何用Chrome开发者工具查看 HTTP 响应内容"></a>HTTP 响应包括哪些部分，如何用Chrome开发者工具查看 HTTP 响应内容</h1><p>一个响应一共分为4部分：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1 协议/版本号 状态码 状态解释</span><br><span class="line">2 Key1: value1</span><br><span class="line">2 Key2: value2</span><br><span class="line">2 Content-Length: 17931</span><br><span class="line">2 Content-Type: text/html</span><br><span class="line">3</span><br><span class="line">4 要下载的内容</span><br></pre></td></tr></table></figure></p><h2 id="用-Chrome-查看响应内容"><a href="#用-Chrome-查看响应内容" class="headerlink" title="用 Chrome 查看响应内容"></a>用 Chrome 查看响应内容</h2><ol><li><p>打开 Network</p></li><li><p>地址栏输入网址</p></li><li><p>选中第一个响应</p></li><li><p>查看 Response Headers，点击「view source」</p></li><li><p>会看到响应的前两部分</p></li><li><p>查看 Response 或者 Preview，你会看到响应的第 4 部分    </p></li></ol><h1 id="如何使用curl命令"><a href="#如何使用curl命令" class="headerlink" title="如何使用curl命令"></a>如何使用curl命令</h1><p>简介: curl是利用URL语法在命令行方式下工作的开源文件传输工具.</p><p>向百度发送一个post请求,请求包含数据 “1234567890”<br><code>curl -X POST -d &quot;1234567890&quot; -s -v -H -- &quot;https://www.baidu.com&quot;</code><br>其中-s表示silent模式，不显示进度和错误.<br>-v 展示curl的版本<br>-H 表示响应头<br>当然curl还有很多可以配置的命令，可以看见更多详细信息</p><p>本文参考链接：<a href="https://curl.haxx.se/docs/manpage.html" target="_blank" rel="noopener">curl命令详解(需翻墙)</a></p><font size="4" color="DodgerBlue">要学的还有很多，急也急不来:)</font> ]]></content>
+      
+      <categories>
+          
+          <category> 每周一篇 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTTP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>封装的数据调用JS文件使用react路由</title>
+      <link href="/2018/06/03/6-3/"/>
+      <url>/2018/06/03/6-3/</url>
+      <content type="html"><![CDATA[<h2 id="吐槽"><a href="#吐槽" class="headerlink" title="吐槽"></a>吐槽</h2><p>react前面文档看的还挺爽，结果试着玩了玩坑太多了，react和router的版本升级导致基本上搜资料=送命，有一个官方的文档还是3.0的，所以英语还是很重要的，来世做个歪果仁。</p><h2 id="react"><a href="#react" class="headerlink" title="react"></a>react</h2><p>&emsp;&emsp;<font size="4">这个遇到坑的需求是：已经提取了一个fetch.js作为调取数据的通用接口，然后在用户查看数据列表时，如果不是处于登陆状态则自动路由到登陆界面。<br>&emsp;&emsp;狗屎的react-router升级到了4.0，之前的browser.history没了，看了半天官方文档和资料没看到解决方法，可能之后的全家桶里有，但是总不可能挖了坑不跳，于是只能改成HashRouter.当然HashRouter并不是推荐做法，只是玩具阶段随便了  </font></p><pre><code>import { Route, HashRouter as Router} from &apos;react-router-dom&apos;;  </code></pre><p>fetch.js  </p><pre><code>if (res.status === 401) {         window.location.replace(&quot;#/login&quot;);       return Promise.reject(&apos;Unauthorized.&apos;);     }   </code></pre><p>基本的功能做的差不多了，上张图书列表的图，有新点子就搞一搞，全家桶还没用全，再搞个框架做做样式试试.<br><img src="https://i.imgur.com/ZBbSG3q.png" alt=""></p>]]></content>
+      
+      <categories>
+          
+          <category> react </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>react初体验、博客重构、ES6</title>
+      <link href="/2018/05/21/5-21/"/>
+      <url>/2018/05/21/5-21/</url>
+      <content type="html"><![CDATA[<h2 id="react"><a href="#react" class="headerlink" title="react"></a>react</h2><p>&emsp;&emsp;<font size="4">react与vue相比在于更加灵活，文档其实写的也非常仔细，并且更加偏重项目。</font>   </p><p>&emsp;&emsp;<font size="4">react在编写上推荐使用JSX来写渲染模板，简单明了。并且使用很多ES6语法糖。数据流仍然是从上往下的，与vue不同的是：react在一般情况下更推荐使用<font color="red" size="5"><strong>状态提升</strong></font>而不是<font color="lueb" size="5"><strong>双向绑定</strong></font>,虽然前者写的代码更多一点，但是可以更快地寻找和定位bug。 </font>  </p><p>&emsp;&emsp;<font size="4">react中常常使用组合的方式来编写WEB，前期虽然可能会比继承付出更多的代码，但是随着项目越来越大，组件的复用会使代码越来越“少”。如果当一个组件里条件或逻辑变得过于复杂，可能就是一个提取组件的好机会。</font><br>&emsp;&emsp;<font size="4">会尽快开始做一个react入门级的应用来练习，然后就是看看成熟应用的逻辑与代码，当然vue那边也不能放下，跟着做做小玩意。</font>  </p><h2 id="博客重构"><a href="#博客重构" class="headerlink" title="博客重构"></a>博客重构</h2><p>&emsp;&emsp;<font size="4">因为重装系统导致之前的文件全部丢失，于是干脆重新玩了下博客，使用了更加简洁清新的风格，未来应该会多做记录，便于复习和进步。 不过markdown刚开始用有点难受</font> </p><h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><p>&emsp;&emsp;<font size="4">平常抽空一直在复习JS高程，之前有听说ES6但是一直没花心思看。现在刚好在看react于是开始挖坑。ES6在17年的时候貌似兼容性已经非常好了，当然直接学的话反正有babel也没什么问题，但是可能看ES5的代码会很难受，所以还是选择齐头并进吧。</font></p><font size="4" color="DodgerBlue">要学的还有很多，急也急不来:)</font> ]]></content>
+      
+      <categories>
+          
+          <category> 每周一篇 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 从新开始 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+  
+  
+</search>
