@@ -3,27 +3,6 @@
   
     
     <entry>
-      <title>W3C、MDN、HTML部分标签介绍</title>
-      <link href="/2018/09/08/9-8/"/>
-      <url>/2018/09/08/9-8/</url>
-      <content type="html"><![CDATA[<h1 id="W3C"><a href="#W3C" class="headerlink" title="W3C"></a>W3C</h1><p>　　万维网（World Wide Web）是作为欧洲核子研究组织的一个项目发展起来的，在那里 Tim Berners-Lee 开发出万维网的雏形。Tim Berners-Lee- 万维网的发明人和万维网联盟的主任。<br>　　<br>　　万维网联盟，又称W3C理事会。1994年10月在麻省理工学院计算机科学实验室成立。建立者是万维网的发明者蒂姆·伯纳斯·李。<br>　　<br>　　W3C 最重要的工作是发展 Web 规范，这些规范描述了 Web 的通信协议（比如 HTML 和 XHTML）和其他的构建模块。　<br>　　<br>　　每项 W3C 推荐的发展是通过由会员和受邀专家组成的工作组来完成的。工作组的经费来自公司和其他组织，并会创建一个工作草案，最后是一份提议推荐。一般来说，为了获得正式的批准，推荐都会被提交给 W3C 会员和主任。</p><h1 id="MDN"><a href="#MDN" class="headerlink" title="MDN"></a>MDN</h1><p>　　Mozilla 开发者网络（MDN）提供有关开放网络技术（Open Web）的信息，包括 HTML、CSS 和万维网及 HTML5 应用的 API。它还记录了  Mozilla 产品的文档，例如 Firefox OS。</p><p>　　Mozilla开发者网络（MDN）是一个完整的学习平台，你可以在这里深入学习网络技术以及能够驱动网络的软件。</p><h1 id="HTML所有标签列表"><a href="#HTML所有标签列表" class="headerlink" title="HTML所有标签列表"></a>HTML所有标签列表</h1><p>　　太多了就直接贴MDN传送门了<br>　　<a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/HTML5/HTML5_element_list" target="_blank" rel="noopener">标签列表（含HTML5）</a></p><h1 id="空标签"><a href="#空标签" class="headerlink" title="空标签"></a>空标签</h1><p>　　一个空元素（empty element）可能是 HTML，SVG，或者 MathML 里的一个不可能存在子节点（例如内嵌的元素或者元素内的文本）的element。</p><p>　　HTML，SVG 和 MathML 的规范都详细定义了每个元素能包含的具体内容（define very precisely what each element can contain）。许多组合是没有任何语义含义的，比如一个 <code>&lt;audio&gt;</code> 元素嵌套在一个 <code>&lt;hr&gt;</code> 元素里。</p><p>　　在 HTML 中，通常在一个空元素上使用一个闭标签是无效的。例如， <code>&lt;input type=&quot;text&quot;&gt;&lt;/input&gt;</code> 的闭标签是无效的 HTML。　　　　</p><h1 id="可替换元素"><a href="#可替换元素" class="headerlink" title="可替换元素"></a>可替换元素</h1><p>　　在CSS里，可替换元素(replaced element)的展现不是由CSS来控制的。这些元素是一类外观渲染独立于CSS的外部对象。典型的可替换元素有<code>&lt;img&gt;、&lt;object&gt;、&lt;video&gt;</code>和表单元素，如<code>&lt;textarea&gt;、&lt;input&gt;</code>。<br>　　某些元素只在一些特殊情况下表现为可替换元素，例如<code>&lt;audio&gt;</code>和<code>&lt;canvas&gt;</code>。通过CSS的content属性来插入的对象被称为匿名可替换对象(annoymous replaced elements)。<br>　　CSS在某些情况下会对可替换元素做特殊处理，比如计算外边距和一些auto值。<br>　　需要注意的是，一部分（并非全部）可替换元素，本身具有尺寸和基线(baseline)，会被像vertical-align之类的一些CSS属性用到。<br>　　<br>本文参考链接：<a href="https://en.wikipedia.org/wiki/World_Wide_Web_Consortium" target="_blank" rel="noopener">W3C</a></p><font size="4" color="DodgerBlue">要学的还有很多，急也急不来:)</font> ]]></content>
-      
-      <categories>
-          
-          <category> 每周一篇 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> HTML </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
       <title>HTTP的简单介绍及查看请求与响应</title>
       <link href="/2018/09/04/9-4/"/>
       <url>/2018/09/04/9-4/</url>
