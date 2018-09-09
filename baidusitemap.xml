@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+    
+    
+  <url>
+    <loc>http://www.yangyi.me/2018/09/08/9-8/</loc>
+    <lastmod>2018-09-09T10:32:13.995Z</lastmod>
+    <data>
+        <display>
+        <title>W3C、MDN、HTML部分标签介绍</title>
+        <pubTime>2018-09-08T04:10:06.000Z</pubTime>
+        
+        <tag>HTML</tag>
+         
+         
+           
+             
+              <breadCrumb title="每周一篇" url="http://www.yangyi.me/categories/%E6%AF%8F%E5%91%A8%E4%B8%80%E7%AF%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.yangyi.me/2018/09/04/9-4/</loc>
+    <lastmod>2018-09-04T14:36:23.000Z</lastmod>
+    <data>
+        <display>
+        <title>HTTP的简单介绍及查看请求与响应</title>
+        <pubTime>2018-09-04T13:11:06.000Z</pubTime>
+        
+        <tag>HTTP</tag>
+         
+         
+           
+             
+              <breadCrumb title="每周一篇" url="http://www.yangyi.me/categories/%E6%AF%8F%E5%91%A8%E4%B8%80%E7%AF%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.yangyi.me/2018/06/03/6-3/</loc>
+    <lastmod>2018-06-03T08:54:13.000Z</lastmod>
+    <data>
+        <display>
+        <title>封装的数据调用JS文件使用react路由</title>
+        <pubTime>2018-06-03T08:38:21.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="react" url="http://www.yangyi.me/categories/react/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.yangyi.me/2018/05/21/5-21/</loc>
+    <lastmod>2018-05-21T09:48:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>react初体验、博客重构、ES6</title>
+        <pubTime>2018-05-21T09:45:43.000Z</pubTime>
+        
+        <tag>从新开始</tag>
+         
+         
+           
+             
+              <breadCrumb title="每周一篇" url="http://www.yangyi.me/categories/%E6%AF%8F%E5%91%A8%E4%B8%80%E7%AF%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+</urlset>
