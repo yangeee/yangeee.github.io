@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>CSS笔记</title>
+      <link href="/2018/09/16/CSS%E7%AC%94%E8%AE%B0/"/>
+      <url>/2018/09/16/CSS%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<p>前言：主要记录下笔记吧，毕竟学的不深，喜欢的可以收藏下博客，持续更新ing :)</p><h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><ol><li><p>3种方法：内联样式，style标签法，外部样式。<br>还有一种不常用：@import (./xxx.css); 在当前的CSS文件里再引用另外一个css</p></li><li><p>link中的rel=relationship关系的意思。<br> <code>&lt;link rel=“stylesheet&quot; href=&quot;xxx&quot;&gt;</code></p></li><li><p>浮动可以让导航栏横着排，儿子写<code>float:left</code> ，清除浮动可以给父亲一个:<br><img src="http://pf4wluvhf.bkt.clouddn.com/111.png" alt="clearfix"></p></li><li><p>使用边框大法可以快速看见BUG所在</p></li><li><p>如果给导航栏元素一个hover后的边框，会导致往左右顶，这个时候就要套路：先给元素直接加一个边框。</p></li><li><p>如果a标签的高度比li还要高了，可以给a一个<code>display:block</code>，应该是把父元素高度撑起来</p></li><li><p>span和span之间如果在vscode里写成2行，那么HTML里就会有空格，写成一行就没了</p></li><li><p>如果父元素内2个儿子，一个写了浮动，另外一个也要写，不然会出现BUG，不好对齐。<br>保证左右2个儿子总高度一致可以居中，不太居中的话就调节其中一个的<code>padding</code></p></li><li><p>div等块级高度由其内部文档流元素的高度总和决定。<br> 文档流：文档内元素的流动方向</p></li><li><p>浏览器不敢把一个span中的一段很长的话打断（热干面）除非使用<code>word-break</code>属性来设置</p></li><li><p><code>font-size</code>的像素指的是字体最高的一端到最低一端的高度</p></li><li><p>字体是基线对齐的，每个字体都有一个建议行高，可以设置<code>line-height</code>来控制。<br><code>line-height</code> 的值是多少像素，那么 span 所占的高度就是多少</p></li><li><p><code>display: fix</code>会让元素脱离文档流，并且会缩起来，也就是原本在导航栏右边的文字又到左边来了</p></li><li><p>BUG来源：<br>–给一个固定的高度<code>height</code><br>–添加宽度<code>width:100%</code> //如果不得不加造成元素宽度大于body的BUG，只能多添加一个div，然后在这个div进行padding等操作</p></li><li><p>设置背景图可以有<code>background-size:cover</code>//图片自适应宽度。还有<code>background-poditioin:center center</code>//居中</p></li><li><p>尽量用<code>max-width</code>来代替<code>width</code>，前者会自适应</p></li><li><p>做span的宽度高度时，不要用width和height，应该用<code>padding</code>来撑开，这样子改需求也不会出错</p></li><li><p><code>border-top-width</code>的宽度为0，那么这个边框的上半部分就是0，只有下面的一半了，当然div的高度和宽度要是0</p></li><li><p>绝对定位子元素一个<code>position: absolute</code>，父元素<code>positiion:relative</code></p></li><li><p>如果一个div给了宽度，再给他添加padding，他会变胖<br>所以一般会在里面再新建一个div，专门用来加padding布局，子元素横向布局直接浮动套路就好 </p></li><li><p>如果一个footer放了svg图标后，上下空隙不同，那么给svg加一个属性<code>vertical-align:top</code></p></li><li><p>当用<code>dl dt dd</code>做那种左右分布的布局时，先使用float让dd居于一行，在给dt一个宽度百分比，dl一个宽度百分比<br>2个加起来要是100%，上下间隙给dd加padding</p></li><li><p>span设置font-size:14px,里面的文字不一定是14px</p></li><li><p><code>display:inline</code>的元素设置<strong>宽高</strong>是无效的，设置<code>magin-top bottom</code>是无效的</p></li></ol>]]></content>
+      
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>HTML常用标签介绍</title>
       <link href="/2018/09/10/9-10/"/>
       <url>/2018/09/10/9-10/</url>
