@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>JS的原型和原型链</title>
+      <link href="/2018/10/28/JS%20%E5%8E%9F%E5%9E%8B%20%E5%8E%9F%E5%9E%8B%E9%93%BE/"/>
+      <url>/2018/10/28/JS%20%E5%8E%9F%E5%9E%8B%20%E5%8E%9F%E5%9E%8B%E9%93%BE/</url>
+      <content type="html"><![CDATA[<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ol><li>首先普通对象（Boolean、Number、String)有各自的上层原型对象，这些原型包装了一些自身的独特方法或者重写的Object原型方法(toString)</li><li>对象.<strong>proto</strong>===函数.prototype</li><li><strong>proto</strong>是公有属性对象，会一层一层的指向上层，最终指向Object.prototype，最终会指向null（<strong>proto</strong>是都有的，不然会被gc回收，浏览器刚开始就会把所有的全部生成好：不写代码就有prototype)</li><li>比较特殊的是函数对象：<br>如果把函数看成对象，那么函数.<strong>proto</strong> === Function.prototype<br>如果把 Function 看成对象，那么 Function.<strong>proto</strong> === Function.prototype</li></ol><h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p>实例对象被声明后可以拥有自己的属性，当然也可以通过原型链间接引用<strong>原型对象中prototype</strong>的属性，当然也可以增加原型对象的属性，特殊一点的就是如果把一个函数看做对象，那么他首先向上找的是Function.prototype(其实函数就是一种对象，是Function的实例)<br><strong>一个对象是由谁实例化的，那么这个对象就等于是由他生出来的，能通过<strong>proto</strong>引用父亲中的方法。实例对象.<strong>proto</strong>==构造函数.prototype</strong></p><font size="4" color="DodgerBlue">要学的还有很多，急也急不来:)</font> ]]></content>
+      
+      <categories>
+          
+          <category> JS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JS 原型 原型链 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>JS里的类型转换、内存、拷贝</title>
       <link href="/2018/10/25/JS-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2-%E5%86%85%E5%AD%98-%E6%8B%B7%E8%B4%9D/"/>
       <url>/2018/10/25/JS-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2-%E5%86%85%E5%AD%98-%E6%8B%B7%E8%B4%9D/</url>
