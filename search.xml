@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>实现一个jQuery的API</title>
+      <link href="/2018/11/17/%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AAjQuery%E7%9A%84API/"/>
+      <url>/2018/11/17/%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AAjQuery%E7%9A%84API/</url>
+      <content type="html"><![CDATA[<h2 id="细节记录："><a href="#细节记录：" class="headerlink" title="细节记录："></a>细节记录：</h2><p>因为是看完视频几天后做的题，就有点瞎写的感觉。<br>第一印象是用一个对象保存2个函数，就能直接调用了，这个思路是对的，但是写的时候错了。<br>对象应该用return返回，我却直接写成<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function()&#123;</span><br><span class="line">    addClass: &#123;&#125;,//正确：return&#123;add: &#123;&#125;, setText:&#123;&#125;&#125;</span><br><span class="line">    setText: &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>还是代码写少了。<br>改正后还存在问题<br>我知道应该获取全部子节点用<code>querySelectorAll</code>,但是刚开始用console.log怎么都打印不出来。<br>然后最后google了一下，发现是自己忘记加<code>document</code>了。。。还是很尴尬的<br>然后偷懒用了forEach循环，再调用一个dom api就做好了添加类的功能，<br>同理替换文本也很简单。</p><p>收获：还是要多动手，<strong>不能用眼睛编程</strong>，很多东西看懂了但是自己打的时候很容易出错</p><font size="4" color="DodgerBlue">要学的还有很多，急也急不来:)</font> ]]></content>
+      
+      <categories>
+          
+          <category> jQuery </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> jQuery </tag>
+            
+            <tag> api </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>JS的原型和原型链</title>
       <link href="/2018/10/28/JS%20%E5%8E%9F%E5%9E%8B%20%E5%8E%9F%E5%9E%8B%E9%93%BE/"/>
       <url>/2018/10/28/JS%20%E5%8E%9F%E5%9E%8B%20%E5%8E%9F%E5%9E%8B%E9%93%BE/</url>
