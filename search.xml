@@ -3,6 +3,31 @@
   
     
     <entry>
+      <title>登陆注册、Cookie、Session</title>
+      <link href="/2019/03/08/Cookie,%E7%99%BB%E9%99%86%E6%B3%A8%E5%86%8C,Session-190308/"/>
+      <url>/2019/03/08/Cookie,%E7%99%BB%E9%99%86%E6%B3%A8%E5%86%8C,Session-190308/</url>
+      <content type="html"><![CDATA[<h2 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h2><p>&emsp;&emsp;Cookie是个啥呢？答：其实就是一段数据，浏览器需要保存这段数据，不得轻易删除。 此后每次浏览器访问该服务器，都必须带上这段数据<br>&emsp;&emsp;当我们去公园游玩时，第一次进去需要买票，然后公园的规定是买一次票那么这一天都可以随便出进，这个时候这张门票就是相当于我们的cookie。它给了我们一个身份，代表我们有进入的资格，对于浏览器也是一样的，当我们登陆一次之后，如果后台有设置的话，就会告诉浏览器给用户一个cookie，那么下次进入就不用再次登陆啦。<br>&emsp;&emsp;另外一种情况就是因为HTTP的无状态性，服务器不知道用户在做些什么操作，比如用户添加了东西至购物车，但是服务器无法知道，所以可以通过cookie来告诉服务器，当然这只是绕过无状态性的办法之一。<br><br></p><h2 id="Cookie的缺陷"><a href="#Cookie的缺陷" class="headerlink" title="Cookie的缺陷"></a>Cookie的缺陷</h2><ol><li>Cookie会被附加在每个HTTP请求中，所以无形中增加了流量。</li><li>由于在HTTP请求中的Cookie是明文传递的，所以安全性成问题，除非用HTTPS。</li><li>Cookie的大小限制在4KB左右，对于复杂的存储需求来说是不够用的。<br><br></li></ol><h2 id="Session"><a href="#Session" class="headerlink" title="Session"></a>Session</h2><p>&emsp;&emsp;Session是在服务端保存的一个数据结构，用来跟踪用户的状态，这个数据可以保存在集群、数据库、文件中。上面说到Cookie的缺陷，它对用户信息的正确性是没有保证的，所以有了Session。服务器通过接受Cookie来知道用户的当前状态并保存在服务器的硬盘里，当用户操作时再通过Cookie更新状态。如果用户禁用Cookie，那么还可以使用URL重写技术来告诉服务器用户的信息，即每次HTTP交互，URL后面都会被附加上一个诸如 sid=xxxxx 这样的参数。<br><br><br>&emsp;&emsp;这里贴一张Session和Cookie的区别总结图，方便一眼复习：）<br><img src="https://i.loli.net/2019/03/09/5c83a40d7d925.png" alt="区别图"></p><h2 id="最后放几个经常混淆的问题"><a href="#最后放几个经常混淆的问题" class="headerlink" title="最后放几个经常混淆的问题"></a>最后放几个经常混淆的问题</h2><h3 id="Cookie-和-LocalStorage-的区别"><a href="#Cookie-和-LocalStorage-的区别" class="headerlink" title="Cookie 和 LocalStorage 的区别"></a>Cookie 和 LocalStorage 的区别</h3><ol><li>Cookie有时间限制，LocalStorage没有</li><li>Cookie需要经过HTTP，LocalStorage不需要</li><li>LocalStorage的存储量比Cookie大很多<br><br></li></ol><h3 id="LocalStorage-和-SessionStorage-的区别"><a href="#LocalStorage-和-SessionStorage-的区别" class="headerlink" title="LocalStorage 和 SessionStorage 的区别"></a>LocalStorage 和 SessionStorage 的区别</h3><ol><li>LocalStorage永久有效，SessionStorage关闭页面就会消失<br><br></li></ol><h3 id="Cookie-如何设置过期时间？如何删除-Cookie？"><a href="#Cookie-如何设置过期时间？如何删除-Cookie？" class="headerlink" title="Cookie 如何设置过期时间？如何删除 Cookie？"></a>Cookie 如何设置过期时间？如何删除 Cookie？</h3><p>&emsp;&emsp;服务器设置响应头时可以在Set-Cookie中设置Expires或者Max-Age的值，前者是过期的具体时间，后者的值是多少秒后过期<br>&emsp;&emsp;删除cookie可以用ctrl+shift+delete打开浏览器的清除缓存页面,或者用cookies.remove()清除<br><br></p><h3 id="Cache-Control-max-age-1000-缓存-与-ETag-的「缓存」有什么区别？"><a href="#Cache-Control-max-age-1000-缓存-与-ETag-的「缓存」有什么区别？" class="headerlink" title="Cache-Control: max-age=1000 缓存 与 ETag 的「缓存」有什么区别？"></a>Cache-Control: max-age=1000 缓存 与 ETag 的「缓存」有什么区别？</h3><p>&emsp;&emsp;ETag的缓存是需要发请求给服务端的，还是会浪费资源。<br>&emsp;&emsp;Cache-Control: max-age=1000 告诉浏览器1000秒内直接读取缓存，除非url改变了。<br><br><br><br></p><font size="3" color="DodgerBlue">要学的还有很多，急也急不来:)</font> ]]></content>
+      
+      <categories>
+          
+          <category> 登陆注册 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Cookie </tag>
+            
+            <tag> 登陆注册 </tag>
+            
+            <tag> Session </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>最近的一点小感悟</title>
       <link href="/2019/03/04/%E6%9C%80%E8%BF%91%E7%9A%84%E4%B8%80%E7%82%B9%E5%B0%8F%E6%84%9F%E6%82%9F-19-03-04/"/>
       <url>/2019/03/04/%E6%9C%80%E8%BF%91%E7%9A%84%E4%B8%80%E7%82%B9%E5%B0%8F%E6%84%9F%E6%82%9F-19-03-04/</url>
