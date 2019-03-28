@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>css3属性平滑加载以及消失【贝塞尔曲线】</title>
+      <link href="/2019/03/28/CSS3%E5%B1%9E%E6%80%A7%E5%80%BC%E5%B9%B3%E6%BB%91%E6%94%B9%E5%8F%98%E4%BB%A5%E5%8F%8A%E9%87%8D%E7%BD%AE%E5%8A%A8%E7%94%BB-19-3-28/"/>
+      <url>/2019/03/28/CSS3%E5%B1%9E%E6%80%A7%E5%80%BC%E5%B9%B3%E6%BB%91%E6%94%B9%E5%8F%98%E4%BB%A5%E5%8F%8A%E9%87%8D%E7%BD%AE%E5%8A%A8%E7%94%BB-19-3-28/</url>
+      <content type="html"><![CDATA[<h2 id="先上效果"><a href="#先上效果" class="headerlink" title="先上效果"></a>先上效果</h2><p><video controls="controls" width="500" src="http://poapwo9ks.bkt.clouddn.com/css3%E5%B1%9E%E6%80%A7%E5%B9%B3%E6%BB%91%E5%8A%A0%E8%BD%BD%E4%BB%A5%E5%8F%8A%E6%B6%88%E5%A4%B1.mp4"></video><br><br></p><h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>&emsp;&emsp;最初看到这个是在学姐的博客上，屁颠屁颠跑去问效果怎么做的，结果一句模板就给打发了，好吧那就自己开搞。<br>&emsp;&emsp;第一眼看过去就认为是动画做的，于是直接keyframe，然后一波操作确实拿下了效果，非常开心。可是当我移出鼠标的那一刻，炸裂！动画直接消失，根本就没有平滑效果，然后就是疯狂的补救，又是一顿操作，然而最后还是战败。不甘的我打开了Google，结果还是没有线索，但是知道了一个关键词：<strong>贝塞尔曲线</strong><br>&emsp;&emsp;最后没办法了，只能老老实实F12，令我震惊的是根本没有keyframe!找了半天跟动画有关系的只有一句<strong>transition-timing-function</strong>。脑袋突然顿悟，因为之前Google也看到了但是以为没用就忽略了，所以直接试，然后舒服的完成了上面的效果：）</p><p>&emsp;&emsp;核心代码就三句，非常简单，果然是生命不息，折腾不止呀</p><pre><code class="Scss"><span class="attribute">transition-timing-function</span>:ease-in-out;<span class="comment">/* 贝塞尔曲线实现 */</span><span class="attribute">transition-property</span>:all;<span class="comment">/* 规定什么属性发生动画 */</span><span class="attribute">transition-duration</span>: <span class="number">2s</span>;<span class="comment">/* 动画时间 */</span></code></pre><p>预览地址：<a href="http://htmlpreview.github.io/?https://github.com/yangeee/blog/blob/master/css_idea/css3%E5%8A%A8%E7%94%BB%E5%8A%A0%E8%BD%BD%E4%BB%A5%E5%8F%8A%E5%B9%B3%E6%BB%91%E6%B6%88%E5%A4%B1/index.html" target="_blank" rel="noopener">点击查看</a><br>源码地址：<a href="https://github.com/yangeee/blog/tree/master/css_idea/css3%E5%8A%A8%E7%94%BB%E5%8A%A0%E8%BD%BD%E4%BB%A5%E5%8F%8A%E5%B9%B3%E6%BB%91%E6%B6%88%E5%A4%B1" target="_blank" rel="noopener">源代码</a></p><p><br><br><br></p><font size="3" color="DodgerBlue">要学的还有很多，急也急不来:)</font> ]]></content>
+      
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS3 </tag>
+            
+            <tag> 贝塞尔曲线 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>登陆注册、Cookie、Session</title>
       <link href="/2019/03/08/Cookie,%E7%99%BB%E9%99%86%E6%B3%A8%E5%86%8C,Session-190308/"/>
       <url>/2019/03/08/Cookie,%E7%99%BB%E9%99%86%E6%B3%A8%E5%86%8C,Session-190308/</url>
