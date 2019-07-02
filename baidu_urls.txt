@@ -1,3 +1,4 @@
+https://yangyi.me/2019/07/02/linux下root用户公钥连接github失败的原因/
 https://yangyi.me/2019/03/28/CSS3属性值平滑改变以及重置动画-19-3-28/
 https://yangyi.me/2019/03/08/Cookie,登陆注册,Session-190308/
 https://yangyi.me/2019/03/04/最近的一点小感悟-19-03-04/

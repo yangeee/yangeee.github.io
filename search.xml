@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>linux下root用户公钥连接github失败的原因</title>
+      <link href="/2019/07/02/linux%E4%B8%8Broot%E7%94%A8%E6%88%B7%E5%85%AC%E9%92%A5%E8%BF%9E%E6%8E%A5github%E5%A4%B1%E8%B4%A5%E7%9A%84%E5%8E%9F%E5%9B%A0/"/>
+      <url>/2019/07/02/linux%E4%B8%8Broot%E7%94%A8%E6%88%B7%E5%85%AC%E9%92%A5%E8%BF%9E%E6%8E%A5github%E5%A4%B1%E8%B4%A5%E7%9A%84%E5%8E%9F%E5%9B%A0/</url>
+      <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>&emsp;&emsp;最近在尝试造一套 vue 的 UI 轮子，在部署 vuepress 上线的时候发现怎么部署都推不上去，想了很多原因，记录下解决的心路历程。</p><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>&emsp;&emsp;先说最终的解决方法： linux 系统同 windows 区别很大，github 的公钥在 linux 系统上有2个地方可以存储。<br>分别是：<br>&emsp;&emsp;一般用户<code>/home/&lt;username&gt;</code> 下的.ssh目录里的公钥文件<br>&emsp;&emsp;还有<code>/root/.ssh</code>里的公钥文件<br>&emsp;&emsp;我的电脑在第一次与github时由于我的年轻，直接用了一般用户建立的公钥和github建立了连接， 但是在部署的时候由于linux对权限的控制，我必须在root用户下运行脚本，但是脚本里的push代码是推不上去的，因为我并没有使用我的root用户下的公钥与github建立连接。<br>&emsp;&emsp;所以解决方法就是： 请打开/root/.ssh/id_rsa.pub，复制公钥到github的setting里的添加ssh秘钥中，新建一个就行啦。</p><h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p>&emsp;&emsp;报错是permission denied(publickeys)，然后我就惊了，因为我做了几个项目了，vscode的git操作从来没有报过错，尤其是这种权限的问题。于是一通谷歌，由于这个问题太简单理解了，所以无非是那几个套路，并且对我来说，因为自己对git也算熟悉，不至于在设置公钥这种方向栽倒。<br>&emsp;&emsp;结果令我难受了一下午，因为我基本把那些套路全试了一遍，并且再三确认自己是成功连接了的，各种命令测试连接github，基本都成功。我愤怒的锤了一通墙之后：）让自己冷静下来，采取试错法，一步一步看到底是哪的问题。<br>&emsp;&emsp;最后发现当我不切root的时候，代码push是完全正常的，只要切到root，就直接权限拒绝，于是灵性开悟，谷歌linux下root用户push权限不够，发现原来linux设置公钥的时候有2个状态，于是就解决了。<br>&emsp;&emsp;这次的踩坑主要还是因为自己对linux的不了解，因为根本没有用过root文件，也不知道2者区别，只知道root用户能解决程序运行的权限问题。</p><p>顺便推一下自己的 UI 库： Ninja-UI<br>主页地址：<a href="https://yangyi.me/Ninja-ui/">Ninja-UI</a><br>源码地址：<a href="https://github.com/yangeee/Ninja-ui" target="_blank" rel="noopener">源代码</a></p><p><br><br><br></p><font size="3" color="DodgerBlue">要学的还有很多，急也急不来:)</font> ]]></content>
+      
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> github </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>css3属性平滑加载以及消失【贝塞尔曲线】</title>
       <link href="/2019/03/28/CSS3%E5%B1%9E%E6%80%A7%E5%80%BC%E5%B9%B3%E6%BB%91%E6%94%B9%E5%8F%98%E4%BB%A5%E5%8F%8A%E9%87%8D%E7%BD%AE%E5%8A%A8%E7%94%BB-19-3-28/"/>
       <url>/2019/03/28/CSS3%E5%B1%9E%E6%80%A7%E5%80%BC%E5%B9%B3%E6%BB%91%E6%94%B9%E5%8F%98%E4%BB%A5%E5%8F%8A%E9%87%8D%E7%BD%AE%E5%8A%A8%E7%94%BB-19-3-28/</url>
